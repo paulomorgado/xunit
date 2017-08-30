@@ -11,4 +11,11 @@
     <ProjectReference Include="..\test.utility\test.utility.csproj" />
     <ProjectReference Include="..\test.testcasefilter\test.testcasefilter.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="PerfTests.tt" Generator="TextTemplatingFileGenerator" LastGenOutput="PerfTests.cs" />
+    <Compile Update="PerfTests.cs" DesignTime="true" AutoGen="true" DependentUpon="PerfTests.tt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
 </Project>
