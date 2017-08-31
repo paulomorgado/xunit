@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>../signing.snk</AssemblyOriginatorKeyFile>
-    <DebugType>embedded</DebugType>
+    <DebugType>full</DebugType>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
