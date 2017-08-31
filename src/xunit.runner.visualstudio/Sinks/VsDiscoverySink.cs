@@ -40,7 +40,7 @@ namespace Xunit.Runner.VisualStudio
         readonly string source;
         readonly TestPlatformContext testPlatformContext;
 
-        string lastTestMethod;
+        string lastTestClass;
 
         public VsDiscoverySink(string source,
                                ITestFrameworkDiscoverer discoverer,
@@ -190,11 +190,11 @@ namespace Xunit.Runner.VisualStudio
         void HandleTestCaseDiscoveryMessage(MessageHandlerArgs<ITestCaseDiscoveryMessage> args)
         {
             var testCase = args.Message.TestCase;
-            var testMethod = $"{testCase.TestMethod.TestClass.Class.Name}.{testCase.TestMethod.Method.Name}";
-            if (lastTestMethod != testMethod)
+            var testClass = $"{testCase.TestMethod.TestClass.Class.Name}";
+            if (lastTestClass != testClass)
                 SendExistingTestCases();
 
-            lastTestMethod = testMethod;
+            lastTestClass = testClass;
             lastTestMethodTestCases.Add(testCase);
             TotalTests++;
 
